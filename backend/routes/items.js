@@ -13,8 +13,9 @@ router.get('/', function(req, res) {
 });
 
 /* Create a new item */
-router.post('/', function(req, res) {
+router.post('/add-item', function(req, res) {
     var item = req.body;
+    console.log(item)
     curId += 1;
     item.id = curId;
     items[item.id] = item;
